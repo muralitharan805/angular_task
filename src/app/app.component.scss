@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  //   padding: 0;
+}
+.header {
+  border: 2px solid green;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: blue;
+  font-weight: bold;
+  position: fixed;
+  color: whitesmoke;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.company-name {
+  //   border: 2px solid red;
+  flex: 1 0 auto;
+}
+.menus {
+  //   border: 2px solid red;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.menu {
+  //   border: 2px solid red;
+  margin: 1px;
+  padding: 10px;
+}
+.active {
+  border: 2px solid red;
+}
+
+.menu:hover {
+  border: 2px solid red;
+}
+
+.content {
+  //   border: 2px solid blue;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
