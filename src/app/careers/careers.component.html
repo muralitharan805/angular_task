@@ -1,1 +1,36 @@
-<h1>careers component works!</h1>
+<form (ngSubmit)="onSubmit()" [formGroup]="careersForm">
+  <div class="careers-form">
+    <h1>careers component works!</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Contact No</mat-label>
+      <input matInput formControlName="phone" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="one">Male</mat-option>
+        <mat-option value="two">Female</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Skills</mat-label>
+      <textarea matInput formControlName="skills"></textarea>
+    </mat-form-field>
+    <div class="btn-group">
+      <button mat-raised-button color="primary" [disabled]="!careersForm.valid">
+        Submit
+      </button>
+      <button mat-raised-button color="primary" (click)="careersForm.reset()">
+        reset
+      </button>
+    </div>
+  </div>
+</form>
